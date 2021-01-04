@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--for bootstraplinking -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!--In Bootstrap any code which we write will come inside the class container div.
+Container will add a margin-left, margin-right, padding-right and padding-left to all the elements inside it. Closed at: 3rd last line-->
+    <div class="container">
+
+        <section id="app">
+            <h1>Apps</h1>
+            <div class="line"></div>
+            <iframe width="400" height="620" style="border: 0px;" src="https://studio.code.org/projects/applab/AmAIOlod-80aGvVFcBdbfjebPGUlVaYjI8ECZcJtZks/embed"></iframe>
+            <iframe width="400" height="620" style="border: 0px;" src="https://studio.code.org/projects/applab/U9AQsuLnTixFr5caYUBM9qmkuaPCvmuWblFMcUPrC14/embed"></iframe>
+        </section>
+
+        <!--* h2 tag: For the heading of the games section.
+● h5 tag: For the description of the games section.
+-->
+
+        <h2>Click On The Games To Explore</h2>
+
+        <h5>This games are bulid in game lab, click on the game to play</h5>
+        <!--First we will wrap the whole code of the slideshow of games section inside a div . n id that is for the identification of this slideshow.
+Then the class carousel slide helps to add a CSS transition and animation effect,which makes the items move when the next or previous buttons are clicked.-->
+        <div id="myCarousel" class="carousel slide">
+
+            <!-- Wrapper for slides -->
+            <!--Then we have to add all the images and links of the slide show inside <div class="carousel-inner"> one by one.
+class="carousel-inner" says that all the contents of the slides will be inside this div.-->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <!--Then we will wrap the first slide we need to show as soon as the page loads inside
+<div class="item active"> -class item will define the contents of the slide and active means this slide will be shown first when the page loads.
+● So inside this div we can place whatever we want to be shown on the first slide.-->
+                    <center>
+                        <a href="https://studio.code.org/projects/spritelab/nT4Dxpv8z3SA18sUwa31AvxC8ZbVPAwShLyvqNfEHUk" target="_blank">
+                            <!--To have image of our game and anchor tag will have the link of the game.-->
+                            <img src="Winne_Pooh.png" class="img-responsive">
+                        </a>
+                        <div class="carousel-content">
+                            <p>Winne_Pooh</p>
+                        </div>
+                    </center>
+                </div>
+                <!--text content for this slide to be shown on the slide, inside <div class="carousel-content">
+carousel-content means it will contain the text content of the respective slide-->
+                <div class="item">
+                    <!--for second slide -->
+                    <!--As this slide does not have an active class, this will not be an active slide and will not appear when the page loads as we want only the first slide to load and displayed when the page load so we sent only the first slide to active item.
+● Like this we can keep adding ‘n’ number of slides we want-->
+                    <center>
+                        <a href="https://studio.code.org/projects/spritelab/crU2BKaKuZdBv0pE0Dfc8QYCea51ibAqodZdehmNTKg" target="_blank">
+                            <img src="Car_game.png" class="img-responsive">
+                        </a>
+                        <div class="carousel-content">
+                            <p>Car_game</p>
+                        </div>
+                    </center>
+                </div>
+
+            </div>
+
+            <!-- Left and right controls ( next and prev button ) -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+
+        <!--Previous button
+➔ class="left carousel-control"
+left says it should be placed on the left of the screen.
+carousel-control gives the style to the anchor tag.
+➔ href="#myCarousel"
+in href we pass the id of the slideshow for the reference so that this anchor tag knows which window to refer to when its clicked.
+➔ data-slide="prev"
+ This gives the functionality of getting the previous slide.-->
+
+        <h2>Click On The Play Store Apps To Explore</h2>
+        <h5>This games are bulid in play lab, click on the app to view</h5>
+        <!--Then data-ride="carousel" attribute tells Bootstrap to begin animating the carousel immediately when the page loads.-->
+
+        <div id="myCarouse2" class="carousel slide" data-ride="carousel">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <center>
+                        <a href="https://bot.dialogflow.com/e08580bb-1718-4627-b8e6-61e3e8bc0c2c" target="_blank">
+                            <img src="chat_app.jpg" class="img-responsive">
+                        </a>
+                        <div class="carousel-content">
+                            <p>Chat app</p>
+                        </div>
+                    </center>
+                </div>
+
+                <div class="item">
+                    <center>
+                        <a href="https://console.dialogflow.com/api-client/demo/embedded/1a5c77b7-e39d-4b66-9ac9-62fe5791d2a1" target="_blank">
+                            <img src="goa.png" class="img-responsive">
+                        </a>
+                        <div class="carousel-content">
+                            <p>Be Fit Not Fat</p>
+                        </div>
+                    </center>
+                </div>
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarouse2" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarouse2" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+
+
+    </div>
+
+</body></html>
